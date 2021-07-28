@@ -213,6 +213,7 @@ h1 {
     transition: opacity 0.4s ease-in-out;
   }
 ul{
+  margin:auto;
   margin-top:20vh;
 }
   .nav-item {
@@ -220,7 +221,7 @@ ul{
     font-weight: 600;
     margin: auto;
     margin-top:0;
-    padding: 20px 40px;
+    padding: 15px;
     text-align: center;
   }
 
