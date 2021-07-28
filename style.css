@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Montserrat:ital,wght@0,300;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500&family=Montserrat:ital,wght@0,300;1,200&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #181719;
+  color: white;
+}
+
+nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  display: flex;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.head {
+  padding: 14px 16px;
+  text-decoration: none;
+  border: solid white 1px;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 20px;
+}
+
+.head:hover {
+  background-color: #31333C;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 10px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: transform 0.5s ease-in-out;
+}
+
+li a:hover {
+  border-bottom: solid white;
+  border-radius: 5px;
+  border-width: 1px;
+  transform: scale(1.1);
+}
+
+.content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.teks-content {
+  font-family: 'Lora', serif;
+  font-weight: 500;
+  font-size: 18px;
+  max-width: 50%;
+  margin-top: 20vh;
+}
+
+.desain-gambar {
+  position: relative;
+  max-width: 100%
+}
+
+.gambar {
+  margin-top: 10vh;
+}
+
+.gambar img {
+  max-width: 100%;
+}
+
+.author {
+  border-radius: 10px;
+  position: absolute;
+  left: 20%;
+  bottom: -10%;
+  width: 410px;
+  height: 189px;
+  background-color: black
+    /*#181719*/
+  ;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+  font-family: 'Lora', serif;
+  margin: 20px 0;
+}
+
+.author img {
+  border-radius: 100px;
+  width: 65px;
+  margin: 10px;
+  float: left;
+}
+
+.profil {
+  margin: 10px;
+}
+
+#jabatan {
+  color: #828282;
+}
+
+.author h1 {
+  margin: 20px;
+}
+
+.creator {
+  margin-left: 30%;
+  margin-top: 30vh;
+  font-weight: bolder;
+}
+
+.creator-design {
+  text-decoration: none;
+  color: #00FFFF;
+}
+
+.hamburger-button {
+  background: none;
+  border: none;
+  position: relative;
+  z-index: 10;
+}
+
+@media (max-width:720px) {
+  nav {
+    justify-content: space-between;
+  }
+
+  .content {
+    flex-wrap: wrap;
+
+  }
+
+  .teks-content {
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .author {
+    left: 5%;
+    bottom: -20%;
+  }
+
+  .creator {
+    margin-left: 10%;
+  }
+
+  li {
+    float: none;
+    line-height: 0;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -110%;
+    height: 100%;
+    width: 95%;
+    z-index: 2;
+    background-color: #181719;
+    color: white;
+    padding: 32px;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .nav--open {
+    transform: translateX(-100%);
+  }
+
+  .nav--open+.backdrop {
+    display: block;
+    opacity: 1;
+  }
+
+  .backdrop {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    pointer-events: none;
+    background: rgba(1, 1, 1, 0.5);
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  .nav-item {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: auto;
+    margin-top: 10vh;
+    padding: 20px 40px;
+  }
+
+  .hamburger-button {
+    background: none;
+    border: none;
+    position: relative;
+    z-index: 10;
+  }
+
+  .hamburger-button__bar {
+    height: 3px;
+    width: 22px;
+    background-color: white;
+    margin-top: 4px;
+    border-radius: 2px;
+    transform-origin: 21px;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  }
+
+  .hamburger-button__bar:nth-child(1) {
+    margin-top: 0;
+  }
+
+  .hamburger-button--open .hamburger-button__bar:nth-child(1) {
+    transform: rotate(-45deg);
+  }
+
+  .hamburger-button--open .hamburger-button__bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-button--open .hamburger-button__bar:nth-child(3) {
+    transform: rotate(45deg);
+  }
+}
+
+@media (max-width:375px) {}
